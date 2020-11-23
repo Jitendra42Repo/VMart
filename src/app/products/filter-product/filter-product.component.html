@@ -1,0 +1,18 @@
+<div class="list-group sticky-top" >
+  <a
+  routerLink="/" [class.active]="!category"
+  class="list-group-item list-group-item-primary list-group-item-action font-weight-bold">Category</a>
+  <ng-container *ngFor="let c of categories$ | async">
+    <a  routerLink="/"  [queryParams]="{category: c.$key }" 
+    class="list-group-item" [class.active]="category === c.$key" >{{c.name }}</a>
+  </ng-container>
+</div>
+
+<!--
+  {
+  "rules": {
+    ".read": "auth < 1606975200000",  // 2020-12-3
+    ".write": "now < 1606975200000",  // 2020-12-3
+  }
+}
+-->

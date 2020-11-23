@@ -1,0 +1,32 @@
+
+<button class="btn btn-outline-primary btn-md" routerLink='/admin/products/new'>Add Product</button>
+<div class="padding">
+    <input class="form-control" ngModel name="search-bar" #query 
+    type="text" placeholder="Search.. " (keyup)="filter(query.value)">
+</div>
+
+<div class="padding">
+    <ng2-smart-table class="table table-hover table-bordered table-responsive" [settings]="settings" [source]="source"
+    (custom)="onCustomAction($event)" (edit)="editRow($event)"></ng2-smart-table>
+</div>
+
+<!--
+<div class="padding">
+    <table class="table table-hover thead-light">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let p of filteredProduct">
+            <td>{{p.title}}</td>
+            <td>{{p.price | currency:'USD'}}</td>
+            <td><a clickable [routerLink]="['/admin/products', p.$key]">Edit</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div> -->
+
