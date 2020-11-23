@@ -8,3 +8,6 @@
 - Project developed with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.8 along with Bootstrap 4.
 - Uses Google's Firebase for hosting and realtime database (AngularFireDatabaseModule).
 - Uses Ng2SmartTableModule for Table data presentation.
+
+## In-Progress...
+- Need to Implement Shopping-cart and check-out functionalities.
